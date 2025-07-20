@@ -1,4 +1,5 @@
 import json
+from gendiff.show_help import args
 
 def _sorted_diff(arg1, arg2):
     result = []
@@ -41,3 +42,8 @@ def check_diff(file1, file2):
     result1 = _sorted_diff(_read_diff(file1), _read_diff(file2))
     format = '\n'.join(map(stylish_format, result1))
     return f'{'{'}\n{_is_bool(format)} \n{'}'}'
+
+
+diff = check_diff(args.file1, args.file2)
+
+print(diff(check_diff('file1.json', 'file2.json')))
