@@ -14,27 +14,27 @@ def sorted_diff(arg1, arg2):
                 result.append({'key': key, 'status': 'change', 'old_value': arg1[key], 'new_value': arg2[key]})
     return result
 
-#def is_bool(arg):
-    #if 'False' in arg or 'True' in arg:
-     #   return str(arg).lower()
-    #else:
-     #   return arg
+def is_bool(arg):
+    if arg is False or arg is True:
+       return str(arg).lower()
+    else:
+       return arg
     
 def stylish_format(diff):
     lines= []
     for item in diff:
-        status = diff['status']
-        key = diff['key']
+        status = item['status']
+        key = item['key']
         if status == 'unchange':
-            lines.append(f' {key}: {item['value']}')
+            lines.append(f'  {key}: {is_bool(item['value'])}')
         elif status == 'add':
-            lines.append(f'+ {key}: {item['value']}')
+            lines.append(f'+ {key}: {is_bool(item['value'])}')
         elif status == 'delete':
-            lines.append(f'- {key}: {item['value']}')
+            lines.append(f'- {key}: {is_bool(item['value'])}')
         elif status == 'change':
-            lines.append(f'- {key}: {item['old_value']}')
-            lines.append(f'+ {key}: {item['new_value']}')
-        return "{\n  " + "\n  ".join(lines) + "\n}"
+            lines.append(f'- {key}: {is_bool(item['old_value'])}')
+            lines.append(f'+ {key}: {is_bool(item['new_value'])}')
+    return "{\n  " + "\n  ".join(lines) + "\n}"
 
 def read_diff(file):
     if file.endswith('.json'):
@@ -42,4 +42,8 @@ def read_diff(file):
     else:
         raise ValueError('Unsupported format')
 
-
+def generate_diff(file1, file2):
+    read_file1 = read_diff(file1)
+    read_file2 = read_diff(file2)
+    sort_diff = sorted_diff(read_file1, read_file2)
+    print(stylish_format(sort_diff))

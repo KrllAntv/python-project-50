@@ -1,5 +1,5 @@
 import argparse
-from gendiff.generate_diff import read_diff, stylish_format, sorted_diff
+from gendiff.generate_diff import generate_diff
 
 def main():
     parser = argparse.ArgumentParser(
@@ -16,12 +16,7 @@ def main():
     )
     args = parser.parse_args()
 
-    diff1 = read_diff(args.first_file)
-    diff2 = read_diff(args.second_file)
-
-    sort_diff = sorted_diff(diff1, diff2)
-    result = stylish_format(sort_diff)
-    print(result)
+    generate_diff(args.first_file, args.second_file)
 
 if __name__ == '__main__':
     main()
