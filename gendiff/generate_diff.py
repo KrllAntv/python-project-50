@@ -1,5 +1,6 @@
 import json
 
+
 def sorted_diff(arg1, arg2):
     result = []
     for key in sorted(arg1 | arg2):
@@ -9,19 +10,34 @@ def sorted_diff(arg1, arg2):
             result.append({'key': key, 'status': 'add', 'value': arg2[key]})
         elif key in arg1 and key in arg2:
             if arg1[key] == arg2[key]:
-                result.append({'key': key, 'status': 'unchange', 'value': arg1[key]})
+                result.append(
+                    {
+                        'key': key,
+                        'status': 'unchange',
+                        'value': arg1[key],
+                        }
+                    )
             else:
-                result.append({'key': key, 'status': 'change', 'old_value': arg1[key], 'new_value': arg2[key]})
+                result.append(
+                    {
+                        'key': key, 
+                        'status': 'change',
+                        'old_value': arg1[key], 
+                        'new_value': arg2[key],
+                    }
+                )
     return result
+
 
 def is_bool(arg):
     if arg is False or arg is True:
-       return str(arg).lower()
+        return str(arg).lower()
     else:
-       return arg
+        return arg
     
+
 def stylish_format(diff):
-    lines= []
+    lines = []
     for item in diff:
         status = item['status']
         key = item['key']
@@ -36,11 +52,13 @@ def stylish_format(diff):
             lines.append(f'+ {key}: {is_bool(item['new_value'])}')
     return "{\n  " + "\n  ".join(lines) + "\n}"
 
+
 def read_diff(file):
     if file.endswith('.json'):
         return json.load(open(file))
     else:
         raise ValueError('Unsupported format')
+
 
 def generate_diff(file1, file2):
     read_file1 = read_diff(file1)
