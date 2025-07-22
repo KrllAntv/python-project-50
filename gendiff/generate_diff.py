@@ -15,8 +15,8 @@ def sorted_diff(arg1, arg2):
                         'key': key,
                         'status': 'unchange',
                         'value': arg1[key],
-                        }
-                    )
+                    }
+                )
             else:
                 result.append(
                     {
