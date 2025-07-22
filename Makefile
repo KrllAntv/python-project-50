@@ -8,5 +8,4 @@ lint: #Проверка линтера
 	uv run ruff check gendiff
 test:
 	uv run pytest
-check:
-	uv test lint
+check: test lint
