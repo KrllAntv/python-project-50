@@ -6,3 +6,7 @@ install: #Установка пакета
 	uv tool install dist/*.whl
 lint: #Проверка линтера
 	uv run ruff check gendiff
+test:
+	uv run pytest
+check:
+	uv test lint
