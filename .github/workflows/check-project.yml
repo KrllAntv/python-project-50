@@ -27,7 +27,7 @@ jobs:
       - name: SonarQubeScan
         uses: SonarSource/sonarqube-scan-action@v5
         env:
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+          SONAR_TOKEN: ${{ secrets.PROJECT_HEXLET}}
         with:
           args: >
             -Dsonar.projectKey=hexlet-boilerplates_python-package
