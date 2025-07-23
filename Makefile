@@ -6,6 +6,9 @@ package-install: #Установка пакета
 	uv tool install dist/*.whl
 lint: #Проверка линтера
 	uv run ruff check gendiff
-test:
+test: #Запуск тестов
 	uv run pytest
+test-coverage:
+	uv run pytest --cov=gendiff --cov-report xml
 check: test lint
+
