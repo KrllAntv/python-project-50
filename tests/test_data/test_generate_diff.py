@@ -10,6 +10,7 @@ def test_generate_diff():
     assert generate_diff('tests/test_data/file1.json', 'tests/test_data/file2.json') == read_file_test()
 
 
-@pytest.mark.xfail(raises=ValueError)
+
 def test_unsupport_format():
-    assert generate_diff('tests/test_data/file1.json', 'tests/test_data/file2.yml')
+    with pytest.raises(ValueError):
+        assert generate_diff('tests/test_data/file1.json', 'tests/test_data/file2.yaml')
