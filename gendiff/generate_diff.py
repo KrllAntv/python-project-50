@@ -64,4 +64,4 @@ def generate_diff(file1, file2):
     read_file1 = read_diff(file1)
     read_file2 = read_diff(file2)
     sort_diff = sorted_diff(read_file1, read_file2)
-    print(stylish_format(sort_diff))
+    return stylish_format(sort_diff)
