@@ -13,4 +13,5 @@ def test_generate_diff():
 
 def test_unsupport_format():
     with pytest.raises(ValueError):
-        assert generate_diff('tests/test_data/file1.json', 'tests/test_data/file2.yaml')
+        generate_diff('tests/test_data/file1.json', 'tests/test_data/file2.yaml')
+    assert generate_diff('tests/test_data/file1.json', 'tests/test_data/file2.json') == read_file_test()
