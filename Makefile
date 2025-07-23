@@ -12,3 +12,4 @@ test-coverage:
 	uv run pytest --cov=gendiff --cov-report xml
 check: test lint
 
+.PHONY: install test lint selfcheck check build
