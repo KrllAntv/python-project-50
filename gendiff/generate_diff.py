@@ -1,4 +1,4 @@
-from parser import read_diff
+from gendiff.parser import read_diff
 
 
 def sorted_diff(arg1, arg2):
