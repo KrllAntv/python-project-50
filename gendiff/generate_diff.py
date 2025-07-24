@@ -1,6 +1,4 @@
-import json
-
-import yaml
+from parser import read_diff
 
 
 def sorted_diff(arg1, arg2):
@@ -53,17 +51,6 @@ def stylish_format(diff):
             lines.append(f'- {key}: {is_bool(item['old_value'])}')
             lines.append(f'+ {key}: {is_bool(item['new_value'])}')
     return "{\n  " + "\n  ".join(lines) + "\n}"
-
-
-def read_diff(file):
-    if file.endswith('.json'):
-        return json.load(open(file))
-    elif file.endswith('.yaml') or file.endswith('.yml'):
-        with open(file, 'r') as f:
-            yaml_file = yaml.safe_load(f)
-        return yaml_file
-    else:
-        raise ValueError('Unsupported format')
 
 
 def generate_diff(file1, file2):
