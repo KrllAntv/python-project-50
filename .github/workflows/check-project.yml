@@ -31,5 +31,5 @@ jobs:
         with:
           args: >
             -Dsonar.projectKey=KrllAntv_python-project-50
-            -Dsonar.organization=KrllAntv
+            -Dsonar.organization=krllantv
             -Dsonar.python.coverage.reportPaths=coverage.xml
