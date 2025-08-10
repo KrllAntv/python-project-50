@@ -12,7 +12,7 @@ def read_file_test2():
         return data    
 
 def read_empty_file():
-    return '{\n}\n'
+    return '{\n}'
 
 def test_generate_diff():
     assert generate_diff('tests/test_data/file1.json', 'tests/test_data/file2.json') == read_file_test()

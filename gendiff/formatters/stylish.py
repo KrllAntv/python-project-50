@@ -18,7 +18,7 @@ def stylish_format(data, repl=' ', space_count=4, _lvl=1):
     for item in data:
         if isinstance(item.get('value'), list):
             value = stylish_format(item['value'], repl, space_count, _lvl + 1)
-            res += f'{indent}{SIGN[item['status']]} {item['key']}: {value}'
+            res += f'{indent}{SIGN[item['status']]} {item['key']}: {value}' + '\n'
         elif isinstance(item.get('value'), dict):
             chang_dict = [
                 {
@@ -26,9 +26,9 @@ def stylish_format(data, repl=' ', space_count=4, _lvl=1):
                 }
             for k, v in item['value'].items()]
             value = stylish_format(chang_dict, repl, space_count, _lvl + 1)
-            res += f'{indent}{SIGN[item['status']]} {item['key']}: {value}'
+            res += f'{indent}{SIGN[item['status']]} {item['key']}: {value}' + '\n'
         else:
             res += f'{indent}{SIGN[item['status']]} {item['key']}: '
             res += f'{is_bool(item['value'])}' + '\n'
-    res += f'{repl * space_count * (_lvl - 1)}' + '}\n'
+    res += f'{repl * space_count * (_lvl - 1)}' + '}'
     return res
