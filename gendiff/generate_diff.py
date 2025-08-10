@@ -62,6 +62,3 @@ def generate_diff(file1, file2, format_name='stylish_format'):
     read_file2 = read_diff(file2)
     sort_diff = sorted_diff(read_file1, read_file2)
     return stylish_format(sort_diff)
-
-
-print(generate_diff('tests/test_data/test_file1.json', 'tests/test_data/test_file2.json'))
