@@ -7,3 +7,6 @@
 
 ### Demo function YAML files
 [![asciicast](https://asciinema.org/a/qvuRdqTk3h8OtGublPlv084kb.svg)](https://asciinema.org/a/qvuRdqTk3h8OtGublPlv084kb)
+
+### Demo nested data
+[![asciicast](https://asciinema.org/a/hyW0BGNzY4iQFu9owsbiB6udb.svg)](https://asciinema.org/a/hyW0BGNzY4iQFu9owsbiB6udb)
