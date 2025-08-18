@@ -10,3 +10,6 @@
 
 ### Demo nested data
 [![asciicast](https://asciinema.org/a/hyW0BGNzY4iQFu9owsbiB6udb.svg)](https://asciinema.org/a/hyW0BGNzY4iQFu9owsbiB6udb)
+
+### Demo formatters - plain
+[![asciicast](https://asciinema.org/a/a6cLoYZHLORrAaT9U5rUPtYjB.svg)](https://asciinema.org/a/a6cLoYZHLORrAaT9U5rUPtYjB)
