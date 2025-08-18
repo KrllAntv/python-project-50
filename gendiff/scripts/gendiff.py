@@ -13,13 +13,14 @@ parser.add_argument(
     '-f', '--format',
     dest='format',
     help='set format of output',
+    type=str
     )
 
 
 def main():
     args = parser.parse_args()
 
-    data = generate_diff(args.first_file, args.second_file)
+    data = generate_diff(args.first_file, args.second_file, args.format)
     print(data)
 
 
