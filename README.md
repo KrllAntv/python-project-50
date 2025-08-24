@@ -13,3 +13,6 @@
 
 ### Demo formatters - plain
 [![asciicast](https://asciinema.org/a/a6cLoYZHLORrAaT9U5rUPtYjB.svg)](https://asciinema.org/a/a6cLoYZHLORrAaT9U5rUPtYjB)
+
+### Demo formatters - json
+[![asciicast](https://asciinema.org/a/GMej7WM7FNC5JLWBlnJT9gMa0.svg)](https://asciinema.org/a/GMej7WM7FNC5JLWBlnJT9gMa0)
