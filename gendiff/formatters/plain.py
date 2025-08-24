@@ -1,6 +1,6 @@
 def _value(arg):
     if isinstance(arg, dict):
-        return f'[complex value]'
+        return '[complex value]'
     elif isinstance(arg, bool):
         return str(arg).lower()
     elif arg is None:
