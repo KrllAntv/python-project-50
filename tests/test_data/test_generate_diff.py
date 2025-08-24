@@ -24,3 +24,4 @@ def test_unsupport_format():
 
 def test_plain():
     assert generate_diff('tests/test_data/test_file1.json', 'tests/test_data/test_file2.json', 'plain') == read_file_test('tests/test_data/test_plain.txt')
+    assert generate_diff('tests/test_data/test_file1.json', 'tests/test_data/test_file2.yaml', 'plain') == read_file_test('tests/test_data/test_plain.txt')
