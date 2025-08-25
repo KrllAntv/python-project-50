@@ -5,8 +5,7 @@ def _value(arg):
         return str(arg).lower()
     elif arg is None:
         return 'null'
-    else:
-        return f"'{str(arg)}'"
+    return f"'{str(arg)}'"
 
 
 def plain_format(arg, path=''):
