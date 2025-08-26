@@ -1,6 +1,7 @@
 from gendiff.generate_diff import generate_diff
 import pytest
 
+
 def read_file_test(arg):
     with open(str(arg), 'r') as file:
         data = file.read()
@@ -10,23 +11,24 @@ def read_file_test(arg):
 def read_empty_file():
     return '{\n}'
 
+
 def test_generate_diff():
     assert generate_diff(
         'tests/test_data/file1.json',
         'tests/test_data/file2.json'
-        ) == read_file_test('tests/test_data/expectation_diff.txt')
+    ) == read_file_test('tests/test_data/expectation_diff.txt')
     assert generate_diff(
         'tests/test_data/file1.json',
         'tests/test_data/file2.yaml'
-        ) == read_file_test('tests/test_data/expectation_diff.txt')
+    ) == read_file_test('tests/test_data/expectation_diff.txt')
     assert generate_diff(
         'tests/test_data/test_file1.json',
         'tests/test_data/test_file2.json'
-        ) == read_file_test('tests/test_data/expect_diff.txt')
+    ) == read_file_test('tests/test_data/expect_diff.txt')
     assert generate_diff(
         'tests/test_data/empty_file1.json',
         'tests/test_data/empty_file2.json'
-        ) == read_empty_file()
+    ) == read_empty_file()
 
 
 def test_unsupport_format():
@@ -34,7 +36,7 @@ def test_unsupport_format():
         generate_diff(
             'tests/test_data/file1.json',
             'tests/test_data/file2.xml'
-            ) # XML unsupported format
+        )  # XML unsupported format
 
 
 def test_plain():
@@ -47,4 +49,4 @@ def test_plain():
         'tests/test_data/test_file1.json',
         'tests/test_data/test_file2.yaml',
         'plain'
-        ) == read_file_test('tests/test_data/test_plain.txt')
+    ) == read_file_test('tests/test_data/test_plain.txt')
