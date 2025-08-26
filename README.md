@@ -2,17 +2,16 @@
 [![Actions Status](https://github.com/KrllAntv/python-project-50/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/KrllAntv/python-project-50/actions)
 [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=KrllAntv_python-project-50&metric=coverage)](https://sonarcloud.io/summary/new_code?id=KrllAntv_python-project-50)
 
-### Demo function JSON files
-[![asciicast](https://asciinema.org/a/g1vhLcMFZkqwgMFxEHv6IIrLK.svg)](https://asciinema.org/a/g1vhLcMFZkqwgMFxEHv6IIrLK)
+## Finding Differences
+This is my second project as part of my studies on the Hexlet platform.
+This project was built using these tools:
 
-### Demo function YAML files
-[![asciicast](https://asciinema.org/a/qvuRdqTk3h8OtGublPlv084kb.svg)](https://asciinema.org/a/qvuRdqTk3h8OtGublPlv084kb)
+| Tool | Description |
+| :------:| :-----------:|
+| [uv](https://docs.astral.sh/uv/) | "An extremely fast Python package and project manager, written in Rust" |
+| [ruff](https://docs.astral.sh/ruff/) | "An extremely fast Python linter and code formatter, written in Rust" |
+| [json](https://docs.python.org/3/library/json.html) | a built-in module that allows you to encode (serialize) and decode (deserialize) data in JSON format |
+| [argparse](https://docs.python.org/3/library/argparse.html) | part of the standard library and provides a way to parse command-line arguments and options 
 
-### Demo nested data
-[![asciicast](https://asciinema.org/a/hyW0BGNzY4iQFu9owsbiB6udb.svg)](https://asciinema.org/a/hyW0BGNzY4iQFu9owsbiB6udb)
-
-### Demo formatters - plain
-[![asciicast](https://asciinema.org/a/a6cLoYZHLORrAaT9U5rUPtYjB.svg)](https://asciinema.org/a/a6cLoYZHLORrAaT9U5rUPtYjB)
-
-### Demo formatters - json
-[![asciicast](https://asciinema.org/a/GMej7WM7FNC5JLWBlnJT9gMa0.svg)](https://asciinema.org/a/GMej7WM7FNC5JLWBlnJT9gMa0)
+### Demo
+[![asciicast](https://asciinema.org/a/TLIckjP04yW4u7nWG8kpP8x9Q.svg)](https://asciinema.org/a/TLIckjP04yW4u7nWG8kpP8x9Q)
