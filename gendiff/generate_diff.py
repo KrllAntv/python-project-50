@@ -51,7 +51,7 @@ def sorted_diff(arg1, arg2):
     return result
 
 
-def generate_diff(file1, file2, format_name='stylish'):
+def generate_diff(file1, file2, format_name):
     read_file1 = read_diff(file1)
     read_file2 = read_diff(file2)
     sort_diff = sorted_diff(read_file1, read_file2)
