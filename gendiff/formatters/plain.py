@@ -3,9 +3,11 @@ def _value(arg):
         return '[complex value]'
     elif isinstance(arg, bool):
         return str(arg).lower()
+    elif isinstance(arg, int):
+        return arg
     elif arg is None:
         return 'null'
-    return f"'{str(arg)}'"
+    return f"'{arg}'"
 
 
 def plain_format(arg, path=''):
