@@ -51,6 +51,7 @@ def test_plain():
         'plain'
     ) == read_file_test('tests/test_data/test_plain.txt')
 
+
 def test_json():
     assert generate_diff(
         'tests/test_data/empty_file1.json',
