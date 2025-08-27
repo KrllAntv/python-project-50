@@ -10,8 +10,13 @@ This project was built using these tools:
 | :------:| :-----------:|
 | [uv](https://docs.astral.sh/uv/) | "An extremely fast Python package and project manager, written in Rust" |
 | [ruff](https://docs.astral.sh/ruff/) | "An extremely fast Python linter and code formatter, written in Rust" |
-| [json](https://docs.python.org/3/library/json.html) | a built-in module that allows you to encode (serialize) and decode (deserialize) data in JSON format |
-| [argparse](https://docs.python.org/3/library/argparse.html) | part of the standard library and provides a way to parse command-line arguments and options 
+| [json](https://docs.python.org/3/library/json.html) | "Built-in module that allows you to encode (serialize) and decode (deserialize) data in JSON format" |
+| [argparse](https://docs.python.org/3/library/argparse.html) | "Part of the standard library and provides a way to parse command-line arguments and options" 
+
+## Setup
+```
+make install
+```
 
 ### Demo
 [![asciicast](https://asciinema.org/a/TLIckjP04yW4u7nWG8kpP8x9Q.svg)](https://asciinema.org/a/TLIckjP04yW4u7nWG8kpP8x9Q)
