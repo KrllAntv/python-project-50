@@ -1,5 +1,5 @@
 from gendiff.formatters.formatter import format
-from gendiff.parser import read_diff
+from gendiff.scripts.parser import read_diff
 
 
 def sorted_diff(arg1, arg2):
