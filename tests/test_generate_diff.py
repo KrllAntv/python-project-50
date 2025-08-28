@@ -54,7 +54,12 @@ def test_plain():
 
 def test_json():
     assert generate_diff(
+        'tests/test_data/test_file1.json',
+        'tests/test_data/test_file2.yaml',
+        'json'
+    ) == read_file_test('tests/test_data/test_json.txt')
+    assert generate_diff(
         'tests/test_data/empty_file1.json',
         'tests/test_data/empty_file2.json',
         'json'
-    ) == str('{}')
+    ) == str('[]')
