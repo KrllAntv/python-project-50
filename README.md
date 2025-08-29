@@ -13,10 +13,20 @@ This project was built using these tools:
 | [json](https://docs.python.org/3/library/json.html) | "Built-in module that allows you to encode (serialize) and decode (deserialize) data in JSON format" |
 | [argparse](https://docs.python.org/3/library/argparse.html) | "Part of the standard library and provides a way to parse command-line arguments and options" 
 
-## Setup
-```
-make install
-```
+## Installation
+`````
+uv build
+``````
+
+````````
+uv tool install dist/*.whl
+````````
+
+## Supported File Formats
+
+#### - JSON (.json)
+
+#### - YAML (.yaml, .yml)
 
 ### Demo
-[![asciicast](https://asciinema.org/a/TLIckjP04yW4u7nWG8kpP8x9Q.svg)](https://asciinema.org/a/TLIckjP04yW4u7nWG8kpP8x9Q)
+[![asciicast](https://asciinema.org/a/5uAiJvsQijvfmvypO9PGiKuMC.svg)](https://asciinema.org/a/5uAiJvsQijvfmvypO9PGiKuMC)
